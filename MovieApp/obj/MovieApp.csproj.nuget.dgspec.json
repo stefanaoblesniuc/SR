@@ -46,6 +46,36 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Ardalis.SmartEnum": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
+            "Ardalis.SmartEnum.SystemTextJson": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[33.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Recombee.ApiClient": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"

@@ -1,4 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using MovieApp.DataBase;
 using MovieApp.Services;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,13 @@ string recombeeToken = "JQBPtARfOrmt46i19cedXCkxGPuC50H0LX4e1RCdFIT9SwjMqt3ZIhj4
 var recombeeService = new RecombeeService(recombeeDatabase, recombeeToken);
 
 // Configurarea bazei de date
+builder.Services.AddDbContext<MovieAppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<MovieService>();
+builder.Services.AddScoped<CSVService>();
+builder.Services.AddScoped<FavoriteMovieService>();
 // recombeeService.ConfigureDatabase();
 
 // Încărcarea datelor din CSV

@@ -3,20 +3,116 @@
   "WorkspaceRootPath": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\services\\preferenceformservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:services\\preferenceformservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\movieapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:movieapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\database\\movieappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:database\\movieappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\services\\favoritemovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:services\\favoritemovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\entities\\favoritemovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:entities\\favoritemovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\controllers\\preferenceformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:controllers\\preferenceformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\dto\\favoritemovie\\favoritemoviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:dto\\favoritemovie\\favoritemoviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\dto\\movie\\moviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:dto\\movie\\moviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\controllers\\favoritemoviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:controllers\\favoritemoviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\dto\\movie\\moviemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:dto\\movie\\moviemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\utils\\customdatetimeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:utils\\customdatetimeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\dto\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:dto\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\services\\csvservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:services\\csvservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\dto\\user\\useradddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:dto\\user\\useradddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\dto\\user\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:dto\\user\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\services\\recombeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:services\\recombeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|c:\\users\\stefana.oblesniuc\\onedrive - metro\\facultate\\master\\sr\\sr\\movieapp\\movieapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{CE868D08-55F7-4E14-9910-C5EACEDEB7FE}|MovieApp.csproj|solutionrelative:movieapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,45 +127,350 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-05T20:55:48.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-05T20:52:41.731Z",
+              "Title": "PreferenceFormService.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\PreferenceFormService.cs",
+              "RelativeDocumentMoniker": "Services\\PreferenceFormService.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\PreferenceFormService.cs",
+              "RelativeToolTip": "Services\\PreferenceFormService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T21:06:30.229Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "FavoriteMovieService.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\FavoriteMovieService.cs",
+              "RelativeDocumentMoniker": "Services\\FavoriteMovieService.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\FavoriteMovieService.cs",
+              "RelativeToolTip": "Services\\FavoriteMovieService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T20:47:35.094Z",
+              "WhenOpened": "2024-12-09T20:52:10.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MovieAppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DataBase\\MovieAppDbContext.cs",
+              "RelativeDocumentMoniker": "DataBase\\MovieAppDbContext.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DataBase\\MovieAppDbContext.cs",
+              "RelativeToolTip": "DataBase\\MovieAppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T19:59:06.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Entities\\User.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Entities\\User.cs",
+              "RelativeToolTip": "Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T21:02:43.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FavoriteMovie.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Entities\\FavoriteMovie.cs",
+              "RelativeDocumentMoniker": "Entities\\FavoriteMovie.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Entities\\FavoriteMovie.cs",
+              "RelativeToolTip": "Entities\\FavoriteMovie.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T20:31:50.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MovieService.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\MovieService.cs",
+              "RelativeDocumentMoniker": "Services\\MovieService.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\MovieService.cs",
+              "RelativeToolTip": "Services\\MovieService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T22:42:40.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PreferenceFormController.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Controllers\\PreferenceFormController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PreferenceFormController.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Controllers\\PreferenceFormController.cs",
+              "RelativeToolTip": "Controllers\\PreferenceFormController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T21:08:45.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FavoriteMovieDTO.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\FavoriteMovie\\FavoriteMovieDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\FavoriteMovie\\FavoriteMovieDTO.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\FavoriteMovie\\FavoriteMovieDTO.cs",
+              "RelativeToolTip": "DTO\\FavoriteMovie\\FavoriteMovieDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T21:01:35.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FavoriteMovieController.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Controllers\\FavoriteMovieController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FavoriteMovieController.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Controllers\\FavoriteMovieController.cs",
+              "RelativeToolTip": "Controllers\\FavoriteMovieController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAwDsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T20:48:49.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MovieDTO.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\Movie\\MovieDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\Movie\\MovieDTO.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\Movie\\MovieDTO.cs",
+              "RelativeToolTip": "DTO\\Movie\\MovieDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T20:56:14.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAIAwwBYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T19:25:12.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T20:51:16.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Entities\\Movie.cs",
+              "RelativeDocumentMoniker": "Entities\\Movie.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Entities\\Movie.cs",
+              "RelativeToolTip": "Entities\\Movie.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T22:40:50.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\User\\UserDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\User\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\User\\UserDTO.cs",
+              "RelativeToolTip": "DTO\\User\\UserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T20:49:00.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MovieController.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "Controllers\\MovieController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAmwCgAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T22:44:51.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MovieMap.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\Movie\\MovieMap.cs",
+              "RelativeDocumentMoniker": "DTO\\Movie\\MovieMap.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\Movie\\MovieMap.cs",
+              "RelativeToolTip": "DTO\\Movie\\MovieMap.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T19:22:08.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CustomDateTimeConverter.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Utils\\CustomDateTimeConverter.cs",
+              "RelativeDocumentMoniker": "Utils\\CustomDateTimeConverter.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Utils\\CustomDateTimeConverter.cs",
+              "RelativeToolTip": "Utils\\CustomDateTimeConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T19:55:18.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserAddDTO.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\User\\UserAddDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\User\\UserAddDTO.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\User\\UserAddDTO.cs",
+              "RelativeToolTip": "DTO\\User\\UserAddDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T20:53:26.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Utils\\Constants.cs",
+              "RelativeDocumentMoniker": "Utils\\Constants.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Utils\\Constants.cs",
+              "RelativeToolTip": "Utils\\Constants.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T19:11:07.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CSVService.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\CSVService.cs",
+              "RelativeDocumentMoniker": "Services\\CSVService.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\CSVService.cs",
+              "RelativeToolTip": "Services\\CSVService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T19:09:07.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T22:15:33.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-05T20:52:41.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAWwBYAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T21:16:17.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserLoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\User\\UserLoginDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\User\\UserLoginDTO.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\DTO\\User\\UserLoginDTO.cs",
+              "RelativeToolTip": "DTO\\User\\UserLoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T22:28:20.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAkwBIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T20:43:17.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-08T22:11:26.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "RecombeeService.cs",
+              "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\RecombeeService.cs",
+              "RelativeDocumentMoniker": "Services\\RecombeeService.cs",
+              "ToolTip": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\Services\\RecombeeService.cs",
+              "RelativeToolTip": "Services\\RecombeeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T20:47:23.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "MovieApp.http",
               "DocumentMoniker": "C:\\Users\\stefana.oblesniuc\\OneDrive - METRO\\facultate\\MASTER\\SR\\SR\\MovieApp\\MovieApp.http",
               "RelativeDocumentMoniker": "MovieApp.http",
@@ -77,8 +478,7 @@
               "RelativeToolTip": "MovieApp.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-12-05T20:41:56.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T20:41:56.522Z"
             }
           ]
         }
