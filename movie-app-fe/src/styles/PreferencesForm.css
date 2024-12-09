@@ -1,0 +1,109 @@
+.preferences-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('D:\Facultate\Master Anul1 - Sem 1\Sisteme de recomandare\proiect\SR\movie-app-fe\public\background-2.jpg');
+    /* Imaginea de fundal */
+    background-size: cover;
+    background-position: center;
+}
+
+.preferences-form form {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Card transparent pe fundal negru */
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.preferences-form h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.preferences-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.preferences-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.preferences-form select,
+.preferences-form input[type="radio"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.preferences-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #f0568a;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.preferences-form button:hover {
+    background-color: #4CAF50;
+
+}
+
+
+/* .preferences-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+.preferences-form h1 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.preferences-form form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.preferences-form label {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.preferences-form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.preferences-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.preferences-form button:hover {
+    background-color: #218838;
+} */
