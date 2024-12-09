@@ -1,0 +1,112 @@
+/* Setează imaginea de fundal */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('D:\Facultate\Master Anul1 - Sem 1\Sisteme de recomandare\proiect\SR\movie-app-fe\public\background-2.jpg');
+    /* Înlocuiește cu URL-ul imaginii tale */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+    height: 100vh;
+    /* Asigură că imaginea ocupă întregul ecran */
+    width: 100%;
+}
+
+/* Stil pentru containerul principal */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* backdrop-filter: blur(5px); */
+    /* Adaugă un efect de blur pe fundal */
+}
+
+/* Card transparent */
+.register-form form {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Negru cu transparență */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Stil pentru input-uri */
+.register-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Stil pentru buton */
+.register-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* .register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.register-form h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-form form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.register-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #0056b3;
+} */
