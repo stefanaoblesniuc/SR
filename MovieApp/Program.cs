@@ -21,6 +21,7 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<MovieService>();
 builder.Services.AddScoped<CSVService>();
 builder.Services.AddScoped<FavoriteMovieService>();
+builder.Services.AddScoped<PreferenceFormService>();
 // recombeeService.ConfigureDatabase();
 
 // Încărcarea datelor din CSV

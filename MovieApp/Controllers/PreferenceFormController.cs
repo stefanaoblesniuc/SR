@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MovieApp.DTO.PreferenceForm;
 using MovieApp.Entities;
 using MovieApp.Services;
 
@@ -17,9 +18,9 @@ public class PreferenceFormController : ControllerBase
 
     // POST: api/PreferenceForm
     [HttpPost]
-    public async Task<IActionResult> AddPreference([FromBody] PreferenceForm preferenceForm)
+    public async Task<IActionResult> AddPreference([FromBody] PreferenceFormAddDTO preferenceForm)
     {
-        var result = await _preferenceFormService.AddPreferenceAsync(preferenceForm.UserId, preferenceForm.Genres, preferenceForm.IMDBScore, preferenceForm.Language);
+        var result = await _preferenceFormService.AddPreferenceAsync(preferenceForm.Username, preferenceForm.Genres, preferenceForm.IMDBScore, preferenceForm.Language);
         return result;
     }
 
