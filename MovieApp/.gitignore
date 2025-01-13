@@ -1,11 +1,71 @@
-# Ignore Visual Studio files
-.vs/
-.vscode/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
+# Compiled files
+*.dll
+*.exe
+*.so
+*.dylib
+*.pyc
+*.pdb
 
-# Ignore bin and obj folders
+# Logs
+*.log
+
+# Build directories
 bin/
 obj/
+out/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Mono auto-generated files
+mono_crash.*
+
+# Visual Studio Code
+.vscode/
+.vscode/*
+
+# Rider
+.idea/
+*.sln.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Entity Framework migrations
+migrations/
+
+# dotnet tooling
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Azure Functions
+local.settings.json
+.storage/
+
+# Configuration files
+appsettings.*.json
+secrets.json
+
+# Yarn / NPM
+node_modules/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Additional Files
+*.mdf
+*.ldf
+*.csv
+*.bak

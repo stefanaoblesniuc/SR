@@ -34,8 +34,11 @@ public class MovieAppDbContext : DbContext
                     .Property(m => m.Premiere)
                     .HasColumnType("text");
             entity.Property(m => m.IMDBScore).IsRequired();
+            entity.Property(m => m.Runtime);
             entity.Property(m => m.Language).IsRequired().HasMaxLength(50);
         });
+        modelBuilder.Entity<FavoriteMovie>()
+        .HasKey(fm => fm.Id);
         modelBuilder.Entity<FavoriteMovie>()
             .HasOne(fm => fm.User)
             .WithMany(u => u.FavoriteMovies)
@@ -43,7 +46,7 @@ public class MovieAppDbContext : DbContext
 
         modelBuilder.Entity<FavoriteMovie>()
             .HasOne(fm => fm.Movie)
-            .WithMany()
+            .WithMany(m => m.FavoriteMovies)
             .HasForeignKey(fm => fm.MovieId);
 
         modelBuilder.Entity<PreferenceForm>()

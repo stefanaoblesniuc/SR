@@ -25,17 +25,18 @@ namespace MovieApp.Services
             return favoriteMovies;
         }
 
-        public async Task<bool> AddFavoriteAsync(Guid userId, Guid movieId)
+        public async Task<bool> AddFavoriteAsync(string userName, string movieTitle)
         {
             // Validate if the user exists
-            var user = await _dbContext.Users.FindAsync(userId);
+            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == userName);
+           // var user = await _dbContext.Users.FindAsync(userId);
             if (user == null)
             {
                 throw new KeyNotFoundException("User not found.");
             }
 
             // Validate if the movie exists
-            var movie = await _dbContext.Movies.FindAsync(movieId);
+            var movie = await _dbContext.Movies.FirstOrDefaultAsync(m => m.Title == movieTitle);
             if (movie == null)
             {
                 throw new KeyNotFoundException("Movie not found.");
@@ -43,7 +44,7 @@ namespace MovieApp.Services
 
             // Check if the favorite movie already exists for the user
             bool isAlreadyFavorite = await _dbContext.FavoriteMovies
-                .AnyAsync(fm => fm.UserId == userId && fm.MovieId == movieId);
+                .AnyAsync(fm => fm.UserId == user.Id && fm.MovieId == movie.Id);
 
             if (isAlreadyFavorite)
             {
@@ -53,8 +54,8 @@ namespace MovieApp.Services
             // Add the favorite movie
             var favoriteMovie = new FavoriteMovie
             {
-                UserId = userId,
-                MovieId = movieId,
+                UserId = user.Id,
+                MovieId = movie.Id,
                 AddedDate = DateTime.UtcNow
             };
 

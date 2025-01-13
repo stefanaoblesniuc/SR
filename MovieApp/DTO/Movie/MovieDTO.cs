@@ -8,5 +8,6 @@ public class MovieDTO
     public string Premiere { get; set; }
     public string IMDBScore { get; set; }
     public string Language {  get; set; }
+    public string Runtime { get; set; }
 
 }

@@ -14,9 +14,9 @@ public class PreferenceFormService
         _dbContext = context;
     }
 
-    public async Task<IActionResult> AddPreferenceAsync(string userName, List<string> genres, string imdbScore, string language)
+    public async Task<IActionResult> AddPreferenceAsync(string userName, string genre, string imdbScore, string language)
     {
-        var user = await _dbContext.Users.FindAsync(userName);
+        var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == userName);
         if (user == null)
         {
             throw new KeyNotFoundException("User not found.");
@@ -26,7 +26,7 @@ public class PreferenceFormService
         {
             Id = Guid.NewGuid(),
             UserId = user.Id,
-            Genres = genres,
+            Genres = genre,
             IMDBScore = imdbScore,
             Language = language
         };

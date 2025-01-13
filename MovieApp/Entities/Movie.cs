@@ -8,5 +8,8 @@
         public string Premiere { get; set; }
         public string IMDBScore { get; set; }
         public string Language { get; set; }
+        public string Runtime { get; set; }
+
+        public ICollection<FavoriteMovie> FavoriteMovies { get; set; }
     }
 }

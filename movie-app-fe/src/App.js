@@ -1,54 +1,28 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { MovieProvider } from "./components/MovieContext";
+import { UserProvider } from "./components/UserContext";
 import RegisterForm from "./components/RegisterForm";
 import PreferencesForm from "./components/PreferencesForm";
 import RecommendedMovies from "./components/RecommendedMovies";
+import MovieDetails from "./components/MovieDetails";
 
 const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<RegisterForm />} />
-        <Route path="/preferences" element={<PreferencesForm />} />
-        <Route path="/recommendations" element={<RecommendedMovies />} />
-      </Routes>
-    </Router>
-  );
+    return (
+        <UserProvider>
+            <MovieProvider>
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<RegisterForm />} />
+                        <Route path="/preferences" element={<PreferencesForm />} />
+                        <Route path="/recommendations" element={<RecommendedMovies />} />
+                        <Route path="/movie/:title" element={<MovieDetails />} />
+                    </Routes>
+                </Router>
+            </MovieProvider>
+        </UserProvider>
+    );
 };
 
 export default App;
 
-
-
-
-
-
-
-
-
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

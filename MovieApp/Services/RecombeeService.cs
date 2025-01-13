@@ -1,44 +1,128 @@
 using Recombee.ApiClient;
 using Recombee.ApiClient.ApiRequests;
+using Recombee.ApiClient.Bindings;
+using Recombee.ApiClient.Util;
 using System;
 using System.Collections.Generic;
 using System.IO;
-
 using CsvHelper;
 using CsvHelper.Configuration;
 using System.Globalization;
+using MovieApp.DataBase;
+using Microsoft.EntityFrameworkCore;
+using MovieApp.Entities;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Linq;
+using MovieApp.DTO.Movie;
+using System.Security.Cryptography.Xml;
+using static System.Net.WebRequestMethods;
+
 
 namespace MovieApp.Services
 {
     public class RecombeeService
     {
-        private readonly RecombeeClient client;
+        private readonly RecombeeClient _recombeeClient;
+        private readonly MovieAppDbContext _dbContext;
+        private readonly PreferenceFormService _formService;
+        private readonly FavoriteMovieService _favoriteMovieService;
+        private readonly MovieService _movieService;
 
-        public RecombeeService(string database, string token)
+        public RecombeeService(string database, string token, MovieAppDbContext dbContext, PreferenceFormService formService,
+            FavoriteMovieService favoriteMovieService)
         {
+            _formService = formService;
+            _favoriteMovieService = favoriteMovieService;
+           // _movieService = movieService;
+            _dbContext = dbContext;
+            _recombeeClient = new RecombeeClient(database, token);
 
-            client = new RecombeeClient(database, token);
+        }
+
+       
+
+        public async Task<List<RecommMovieDTO>> GetRecommendationsAsync(string username)
+        {
+            // Retrieve the user by username
+            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username);
+            if (user == null)
+            {
+                throw new KeyNotFoundException("User not found.");
+            }
+
+            // Retrieve the user's preferences
+            var preferences = await _formService.GetPreferencesAsync(user.Id);
+            if (preferences == null)
+            {
+                throw new Exception("No preferences found for the user.");
+            }
+            string sentence;
+            if (preferences.IMDBScore == "yes")
+            {
+                sentence = "and 5 > 'IMDB-Score'";
+            } else
+            {
+                sentence = "";
+            }
+
+            RecommendationResponse result = _recombeeClient.Send(new RecommendItemsToUser(user.Id.ToString(), 2,
+            returnProperties: true,
+            filter: $"\"{preferences.Genres}\" in 'Genre' and \"{preferences.Language}\" in 'Language' {sentence}"
+              )
+            );
+
+            // Mapping function to create Movie objects
+            List<RecommMovieDTO> recommendedMovies = result.Recomms.Select(r =>
+            {
+                string titleProperty = r.Values.GetValueOrDefault("Title").ToString();
+                string genreProperty = r.Values.GetValueOrDefault("Genre").ToString();
+                var languageProperty = r.Values.GetValueOrDefault("Language").ToString();
+                var imdbScoreProperty = r.Values.GetValueOrDefault("IMDB-Score").ToString();
+
+                return new RecommMovieDTO
+                {
+                    Title = titleProperty,
+                    Genre = genreProperty,
+                    Language = languageProperty,
+                    IMDBScore = imdbScoreProperty
+                };
+            }).ToList();
+
+            return recommendedMovies;
+
+            // Select recommendations and map to Movie objects
+            //  List<Movie> recommendedMovies = 
+
+            List<Movie> recommendedMovies1 = result.Recomms.Select(r => new Movie
+            {
+                Title = (string)r.Values["Title"],
+                Genre = (string)r.Values["Genre"],
+                Language = (string)r.Values["Language"],
+                IMDBScore = (string)r.Values["IMDB-Score"]
+            }).ToList();
+
+            //return result.Recomms.Select(r => r.Id).ToList();
         }
 
         // Metodă pentru configurarea bazei Recombee
-        // public void ConfigureDatabase()
-        // {
-        //     try
-        //     {
-        //         // Adaugă proprietăți pentru item
-        //         client.Send(new AddItemProperty("Title", "string"));
-        //         client.Send(new AddItemProperty("Genre", "string"));
-        //         client.Send(new AddItemProperty("Premiere", "string"));
-        //         client.Send(new AddItemProperty("Runtime", "int"));
-        //         client.Send(new AddItemProperty("IMDB-Score", "double"));
-        //         client.Send(new AddItemProperty("Language", "string"));
-        //         Console.WriteLine("Baza de date a fost configurată cu succes!");
-        //     }
-        //     catch (Exception ex)
-        //     {
-        //         Console.WriteLine($"Eroare la configurarea bazei: {ex.Message}");
-        //     }
-        // }
+         public void ConfigureDatabase()
+         {
+             try
+             {
+                // Adaugă proprietăți pentru item
+                _recombeeClient.Send(new AddItemProperty("Title", "string"));
+                _recombeeClient.Send(new AddItemProperty("Genre", "string"));
+                _recombeeClient.Send(new AddItemProperty("Premiere", "string"));
+                _recombeeClient.Send(new AddItemProperty("Runtime", "int"));
+                _recombeeClient.Send(new AddItemProperty("IMDB-Score", "double"));
+                _recombeeClient.Send(new AddItemProperty("Language", "string"));
+                 Console.WriteLine("Baza de date a fost configurată cu succes!");
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine($"Eroare la configurarea bazei: {ex.Message}");
+             }
+         }
 
         // Metodă pentru încărcarea datelor dintr-un fișier CSV
         // public void LoadDataFromCsv(string filePath, int maxLines = 585)
@@ -100,15 +184,86 @@ namespace MovieApp.Services
         //     }
         // }
 
-
-
-        // Metodă pentru a testa conexiunea (opțional)
-
-        public void LoadDataFromCsv(string filePath, int maxLines = 585)
+        public async Task AddUserAsync(string userId)
         {
             try
             {
+                await _recombeeClient.SendAsync(new AddUser(userId));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding user to Recombee: {ex.Message}");
+                throw;
+            }
+        }
+
+        public async Task<RecommendationResponse> SendRecomm(Movie movie,MovieApp.Entities.User user)
+        {
+            try
+            {
+                var response = await _recombeeClient.SendAsync(new RecommendItemsToItem(
+                    movie.Id.ToString(),
+                    user.Id.ToString(),// ID of the favorite movie
+                    3                  // Number of recommendations
+                ));
+                return response;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding user to Recombee: {ex.Message}");
+                throw;
+            }
+        }
+
+        public async Task AddMovieAsync(Movie movie)
+        {
+
+            try
+            {
+                // await _recombeeClient.SendAsync(new AddItem(
+                //     movie.Id.ToString()));
+
+                await _recombeeClient.SendAsync(new SetItemValues(
+                    movie.Id.ToString(), new Dictionary<string, object>
+                            {
+                            //{ "Title", movie.Title },
+                            //{ "Genre", movie.Genre},
+                            //{ "Premiere", movie.Premiere },
+                            //{ "Language", movie.Language },
+                            {"Runtime", movie.Runtime }
+                            //{ "IMDB-Score", movie.IMDBScore },
+                            }));
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding user to Recombee: {ex.Message}");
+                throw;
+            }
+
+
+        }
+         // Use Movie.Id as the Recombee item ID
+                 /*   new Dictionary<string, object>
+                            {
+                            { "Title", movie.Title
+    },
+                            { "Genre", movie.Genre
+},
+                            { "Premiere", movie.Premiere },
+                            { "Language", movie.Language },
+                            { "IMDB-Score", movie.IMDBScore },
+                            })*/
+
+        // Metodă pentru a testa conexiunea (opțional)
+
+       /* public async Task LoadDataFromCsv(string filePath, int maxLines = 585)
+        {
+            
+            try
+            {
                 var requests = new List<Request>();
+                
                 int lineCount = 0;
                 int itemId = 0;
 
@@ -128,16 +283,32 @@ namespace MovieApp.Services
 
                     // Maparea dintre coloanele CSV și proprietățile Recombee
                     var propertyMapping = new Dictionary<string, string>
-            {
-                { "Title", "Title" },
-                { "Genre", "Genre" },
-                { "Premiere", "Premiere" },
-                { "Runtime", "Runtime" },
-                { "IMDB Score", "IMDB-Score" },
-                { "Language", "Language" }
-            };
+                    {
+                        { "Title", "Title" },
+                        { "Genre", "Genre" },
+                        { "Premiere", "Premiere" },
+                        { "Runtime", "Runtime" },
+                        { "IMDB Score", "IMDB-Score" },
+                        { "Language", "Language" }
+                    };
 
-                    foreach (var record in records)
+                   /* foreach (var movie in records)
+                    {
+                         _recombeeClient.SendAsync(new SetItemValues(
+                                        movie.Id.ToString(), // Use Movie.Id as the Recombee item ID
+                                        new Dictionary<string, object>
+                                        {
+                                        { "Title", movie.Title },
+                                        { "Genre", movie.Genre },
+                                        { "Premiere", movie.Premiere },
+                                        { "Language", movie.Language },
+                                        { "IMDB-Score", movie.IMDBScore },
+
+                                        }
+                                    ));
+                    }*/
+
+                 /*   foreach (var record in records)
                     {
                         var recordDict = (IDictionary<string, object>)record;
 
@@ -168,13 +339,13 @@ namespace MovieApp.Services
 
                 // Trimite cererile în Batch
                 Console.WriteLine($"Număr total de cereri: {requests.Count}");
-                var response = client.Send(new Batch(requests));
-                Console.WriteLine($"Răspuns de la Recombee: {response}");
+                var response = _recombeeClient.Send(new Batch(requests));
+                Console.WriteLine($"Răspuns de la Recombee: {response.Responses}");
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Eroare la încărcarea datelor din CSV: {ex.Message}");
             }
-        }
+        }*/
     }
 }
