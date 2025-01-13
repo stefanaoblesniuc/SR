@@ -1,24 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import MovieCard from "./MovieCard";
+import { MovieContext } from "./MovieContext";
 import "../styles/RecommendedMovies.css";
 
 const RecommendedMovies = () => {
-    const movies = [
-        { id: 1, title: "Inception", genre: "Sci-Fi", language: "English", score: 8.8 },
-        { id: 2, title: "Parasite", genre: "Drama", language: "Korean", score: 8.6 },
-        { id: 3, title: "The Dark Knight", genre: "Action", language: "English", score: 9.0 },
-    ];
+    const { movies } = useContext(MovieContext); // Obținem lista de filme din context
+
 
     return (
         <div className="recommended-movies">
             <h1>Recommended Movies</h1>
             <div className="movie-list">
                 {movies.map((movie) => (
-                    <MovieCard key={movie.id} movie={movie} />
+                    <MovieCard key={movie.title} movie={movie} />
                 ))}
             </div>
         </div>
     );
 };
+
+
 
 export default RecommendedMovies;

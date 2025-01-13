@@ -8,6 +8,8 @@ using MovieApp.Utils;
 using System.Globalization;
 using System.Reflection.Metadata;
 using MovieApp.DTO.Movie;
+using Recombee.ApiClient.Bindings;
+using Recombee.ApiClient.ApiRequests;
 
 namespace MovieApp.Controllers
 {
@@ -17,12 +19,15 @@ namespace MovieApp.Controllers
     {
         private readonly MovieService _movieService;
         private readonly CSVService _csvService;
+        private readonly RecombeeService _recombeeService;
 
-        public MovieController(MovieService movieService, CSVService csvService)
+        public MovieController(MovieService movieService, CSVService csvService, RecombeeService recombeeService)
         {
             _movieService = movieService;
             _csvService = csvService;
+            _recombeeService = recombeeService;
         }
+
 
         [HttpGet("getMovie")]
         public async Task<IActionResult> GetMovie([FromQuery] string name)
@@ -39,6 +44,30 @@ namespace MovieApp.Controllers
             }
 
             return Ok(new { message = "Movie found", movie });
+        }
+
+        [HttpPost("recom")]
+        public async Task<IActionResult> UploadMovies2()
+        {
+            try
+            {
+                var movies = await _movieService.GetMovies();
+
+                foreach (var movie in movies)
+                {
+                    await _recombeeService.AddMovieAsync(movie);
+                }
+
+                
+                return CreatedAtAction(nameof(UploadMovies), movies);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
+         
+            
         }
 
         [HttpPost("upload")]

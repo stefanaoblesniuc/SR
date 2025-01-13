@@ -13,6 +13,7 @@ public class MovieMap : ClassMap<MovieApp.Entities.Movie>
         Map(m => m.Premiere).Name("Premiere");
         Map(m => m.IMDBScore).Name("IMDB Score"); // Match the header in the CSV
         Map(m => m.Language).Name("Language");
+        Map(m => m.Runtime).Name("Runtime");
         Map(m => m.Id).Ignore(); // Ignore the 'Id' property since it's not in the CSV
     }
 }

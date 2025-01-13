@@ -5,15 +5,18 @@ using MovieApp.Services;
 
 namespace MovieApp.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
+    //[Route("User")]
+    [ApiController] // This attribute specifies for the framework to add functionality to the controller such as binding multipart/form-data.
+    [Route("api/[controller]")]
     public class UserController : Controller
     {
         private readonly UserService _userService;
+        private readonly RecombeeService _recombeeService;
 
-        public UserController(UserService userService)
+        public UserController(UserService userService, RecombeeService recombeeService)
         {
             _userService = userService;
+            _recombeeService = recombeeService;
         }
 
         [HttpPost("login")]
@@ -34,6 +37,8 @@ namespace MovieApp.Controllers
             try
             {
                 var user = await _userService.AddUser(request.Username, request.Password);
+
+                await _recombeeService.AddUserAsync(user.Id.ToString());
                 return CreatedAtAction(nameof(Login), new { username = user.Username }, user);
             }
             catch (Exception ex)

@@ -1,32 +1,65 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/PreferencesForm.css";
+import UserContext from "./UserContext";
+import {MovieContext} from "./MovieContext";
 
 const PreferencesForm = () => {
-    const [genre, setGenre] = useState("");
-    const [highScore, setHighScore] = useState("");
+    const { fetchMovies } = useContext(MovieContext);
+    const [genres, setGenre] = useState("");
+    const [imdbScore, setHighScore] = useState("");
     const [language, setLanguage] = useState("");
     const navigate = useNavigate();
 
-    const genres = ["Actiune", "Documentar", "Comedie", "Drama", "Horror"];
-    const languages = ["Engleza", "Italiana", "Spaniola", "Germana"];
+    const { username } = useContext(UserContext);
 
-    const handleSubmit = (e) => {
+    const genress = ["Action", "Documentary", "Comedy", "Drama", "Horror"];
+    const languages = ["English", "Italian", "Spanish", "German"];
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Poti salva preferințele local sau le poți trimite către un backend
-        navigate("/recommendations");
+
+        // Create an object for the data
+        const preferences = {
+            genres,
+            imdbScore,
+            language,
+            username
+        };
+
+        console.log(preferences);
+
+        try {
+            // Send the data to the API
+            const response = await fetch("https://localhost:7104/api/PreferenceForm", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(preferences),
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to save preferences.");
+            }
+            fetchMovies(username);
+            // Navigate to the recommendations page on success
+            navigate("/recommendations");
+        } catch (error) {
+            console.error("Error submitting preferences:", error);
+            alert("An error occurred while saving your preferences. Please try again.");
+        }
     };
 
     return (
         <div className="preferences-form">
-
             <form onSubmit={handleSubmit}>
-                <h1>Seteaza-ti preferintele</h1>
+                <h1>Set your preferences!</h1>
                 <label>
-                    Genul preferat
-                    <select value={genre} onChange={(e) => setGenre(e.target.value)}>
+                    Favorite genre
+                    <select value={genres} onChange={(e) => setGenre(e.target.value)}>
                         <option value="">Select</option>
-                        {genres.map((g) => (
+                        {genress.map((g) => (
                             <option key={g} value={g}>
                                 {g}
                             </option>
@@ -34,15 +67,15 @@ const PreferencesForm = () => {
                     </select>
                 </label>
                 <label>
-                    Preferi sa aiba un scor ridicat?
-                    <select value={highScore} onChange={(e) => setHighScore(e.target.value)}>
+                    High score on IMDB?
+                    <select value={imdbScore} onChange={(e) => setHighScore(e.target.value)}>
                         <option value="">Select</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
                 </label>
                 <label>
-                    Limba preferata:
+                    Language:
                     <select value={language} onChange={(e) => setLanguage(e.target.value)}>
                         <option value="">Select</option>
                         {languages.map((lang) => (

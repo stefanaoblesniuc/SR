@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MovieApp.DTO.FavoriteMovie;
 using MovieApp.Entities;
 using MovieApp.Services;
 
 namespace MovieApp.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class FavoriteMovieController : Controller
     {
         public readonly FavoriteMovieService _favoriteMovieService;
@@ -16,12 +17,12 @@ namespace MovieApp.Controllers
             _favoriteMovieService = favoriteMovieService;
         }
 
-        [HttpPost("add-favorite")]
-        public async Task<IActionResult> AddFavorite(Guid userId, Guid movieId)
+        [HttpPost("addfavorite")]
+        public async Task<IActionResult> AddFavorite([FromBody] FavoriteRequestDto request)
         {
             try
             {
-                var isAdded = await _favoriteMovieService.AddFavoriteAsync(userId, movieId);
+                var isAdded = await _favoriteMovieService.AddFavoriteAsync(request.Username, request.MovieTitle);
                 if (!isAdded)
                 {
                     return BadRequest(new { message = "Movie is already in favorites." });
