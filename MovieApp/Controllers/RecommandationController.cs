@@ -30,8 +30,8 @@ namespace MovieApp.Controllers
             return Ok(new { recommendations });
         }
 
-        [HttpGet("normalRecc")]
-        public async Task<IActionResult> GetRecomm(string username)
+        [HttpGet("normalReccLike")]
+        public async Task<IActionResult> GetRecommLike(string username)
         {
             var recommendations = await _movieService.GetGoodRecommendationsAsync(username);
 
@@ -39,6 +39,34 @@ namespace MovieApp.Controllers
             {
                 return NotFound("No recommendations found based on the given preferences.");
             } 
+
+            return Ok(new { recommendations });
+        }
+
+
+        [HttpGet("normalReccDislike")]
+        public async Task<IActionResult> GetRecommDislike(string username)
+        {
+            var recommendations = await _movieService.GetDislikeRecommendationsAsync(username);
+
+            if (recommendations.Count == 0)
+            {
+                return NotFound("No recommendations found based on the given preferences.");
+            }
+
+            return Ok(new { recommendations });
+        }
+
+
+        [HttpGet("randomRecc")]
+        public async Task<IActionResult> GetRandomRecomm(string username)
+        {
+            var recommendations = await _movieService.GetRandomRecommendationsAsync(username);
+
+            if (recommendations.Count == 0)
+            {
+                return NotFound("No recommendations found based on the given preferences.");
+            }
 
             return Ok(new { recommendations });
         }

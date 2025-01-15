@@ -65,7 +65,7 @@ namespace MovieApp.Services
                 sentence = "";
             }
 
-            RecommendationResponse result = _recombeeClient.Send(new RecommendItemsToUser(user.Id.ToString(), 2,
+            RecommendationResponse result = _recombeeClient.Send(new RecommendItemsToUser(user.Id.ToString(), 10,
             returnProperties: true,
             filter: $"\"{preferences.Genres}\" in 'Genre' and \"{preferences.Language}\" in 'Language' {sentence}"
               )
@@ -86,7 +86,8 @@ namespace MovieApp.Services
                     Language = languageProperty,
                     IMDBScore = imdbScoreProperty
                 };
-            }).ToList();
+            }).DistinctBy(movie => movie.Title) // Adjust the property or combination here
+            .ToList();
 
             return recommendedMovies;
 
@@ -204,9 +205,42 @@ namespace MovieApp.Services
                 var response = await _recombeeClient.SendAsync(new RecommendItemsToItem(
                     movie.Id.ToString(),
                     user.Id.ToString(),// ID of the favorite movie
-                    3                  // Number of recommendations
+                    10               // Number of recommendations
                 ));
                 return response;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding user to Recombee: {ex.Message}");
+                throw;
+            }
+        }
+
+        public async Task<RecommendationResponse> SendRecommDislike(Movie movie, MovieApp.Entities.User user)
+        {
+            try
+            {
+                RecommendationResponse result = _recombeeClient.Send(new RecommendItemsToUser(user.Id.ToString(), 10,
+                returnProperties: true,
+                filter: $"\"{movie.Genre}\" not in 'Genre'"
+                    )
+                );
+                return result;
+            }
+            catch (Exception ex) {
+                Console.WriteLine($"Error adding user to Recombee: {ex.Message}");
+                throw;
+            }
+        }
+
+        public async Task<RecommendationResponse> SendRandomRecomm(MovieApp.Entities.User user)
+        {
+            try
+            {
+                RecommendationResponse result = _recombeeClient.Send(new RecommendItemsToUser(user.Id.ToString(), 10,
+                returnProperties: true
+                ));
+                return result;
             }
             catch (Exception ex)
             {
