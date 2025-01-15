@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using MovieApp;
 using MovieApp.Controllers;
 using MovieApp.DataBase;
 using MovieApp.Services;
@@ -36,6 +37,7 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<MovieService>();
 builder.Services.AddScoped<CSVService>();
 builder.Services.AddScoped<FavoriteMovieService>();
+builder.Services.AddScoped<DislikeMovieService>();
 builder.Services.AddScoped<PreferenceFormService>();
 builder.Services.AddScoped<RecombeeService>(sp =>
 {

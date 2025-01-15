@@ -3,121 +3,122 @@ import { useParams, useNavigate } from "react-router-dom";
 import { MovieContext } from "./MovieContext";
 import "../styles/MovieDetails.css";
 import UserContext from "./UserContext";
-
+ 
 const MovieDetails = () => {
     const { title } = useParams();
-    const {username} = useContext(UserContext);
+    const { username } = useContext(UserContext);
     const navigate = useNavigate();
-    const { movies, setMovies } = useContext(MovieContext); // Obținem și actualizăm lista de filme
-
-   // console.log(title);
-  //  console.log(username);
-    const movie = movies && Array.isArray(movies) ? movies.find((m) => m.title === title) : null;
-
+    const { movies, setMovies } = useContext(MovieContext);
+ 
+    const movie = movies?.find((m) => m.title === title);
+ 
     const [progress, setProgress] = useState(0);
-
-
-/*    useEffect(() => {
-        const fetchMovie = async () => {
-            try {
-                const response = await fetch(`https://localhost:7104/api/Recommandation/normalRecc?username=${username}`);
-                if (response.ok) {
-                    const data = await response.json();
-                    setMovies(data);
-                } else {
-                    console.error("Movie not found");
-                }
-            } catch (error) {
-                console.error("Error fetching movie details:", error);
-            }
-        };
-
-        fetchMovie();
-    }, [title]); */
-
+ 
     useEffect(() => {
         if (!movie) return;
-
+ 
         const interval = setInterval(() => {
-            setProgress((prev) => {
-                if (prev >= 100) {
-                    clearInterval(interval);
-                    return 100;
-                }
-                return prev + 5;
-            });
+            setProgress((prev) => (prev >= 100 ? 100 : prev + 5));
         }, 300);
-
+ 
         return () => clearInterval(interval);
     }, [movie]);
-
+ 
     if (!movie) {
         return <h1>Loading...</h1>;
     }
+ 
     const userData = {
         username: username,
         movieTitle: movie.title,
     };
-
+ 
+    const fetchNewRecommendations = async (url) => {
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const data = await response.json();
+                setMovies(data.recommendations || []);
+                navigate("/recommendations");
+            } else {
+                console.error("Error fetching recommendations:", response.statusText);
+                alert("Failed to fetch new recommendations.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred while fetching recommendations.");
+        }
+    };
+ 
     const handleLike = async () => {
         try {
-            console.log(userData);
             const response = await fetch("https://localhost:7104/api/FavoriteMovie/addfavorite", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(
-                    userData
-                )
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(userData),
             });
-    
+ 
             if (response.ok) {
-                const result = await response.json();
                 alert(`You liked ${movie.title}!`);
-                console.log("Response from server:", result);
-                const response1 = await fetch(`https://localhost:7104/api/Recommandation/normalRecc?username=${username}`);
-                if (response1.ok) {
-                    const data = await response1.json();
-                    console.log(JSON.stringify(data, null, 2));
-                    setMovies(data.recommendations || []);
-                } else {
-                    console.error("Movie not found");
-                }
-                // Navigate to recommendations or update state
-                navigate("/recommendations");
+                await fetchNewRecommendations(`https://localhost:7104/api/Recommandation/normalReccLike?username=${username}`);
             } else {
                 console.error("Failed to like the movie:", response.statusText);
                 alert("An error occurred while liking the movie.");
             }
         } catch (error) {
-            console.error("Error sending like request:", error);
+            console.error("Error liking movie:", error);
             alert("Failed to communicate with the server.");
         }
     };
-
+ 
+    const handleDislike = async () => {
+        try {
+            const response = await fetch("https://localhost:7104/api/DislikeMovie/adddislike", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(userData),
+            });
+ 
+            if (response.ok) {
+                alert(`You disliked ${movie.title}!`);
+                await fetchNewRecommendations(`https://localhost:7104/api/Recommandation/normalReccDislike?username=${username}`);
+            } else {
+                console.error("Failed to dislike the movie:", response.statusText);
+                alert("An error occurred while disliking the movie.");
+            }
+        } catch (error) {
+            console.error("Error disliking movie:", error);
+            alert("Failed to communicate with the server.");
+        }
+    };
+ 
     return (
-        <div className="movie-details">
-            <div className="movie-card">
-                <h1>{movie.title}</h1>
-                <p><strong>Genre:</strong> {movie.genre}</p>
-                <p><strong>Language:</strong> {movie.language}</p>
-                <p><strong>Score:</strong> {movie.imdbScore}</p>
-                <div className="progress-section">
-                    <p>Movie Viewing Progress:</p>
-                    <div className="progress-bar-container">
-                        <div className="progress-bar" style={{ width: `${progress}%` }} />
-                    </div>
-                </div>
-                <div className="buttons">
-                    <button className="like-button" onClick={handleLike}>Like</button>
-                    <button className="back-button" onClick={() => navigate(-1)}>Go Back</button>
-                </div>
-            </div>
-        </div>
+<div className="movie-details">
+<div className="movie-card">
+<h1>{movie.title}</h1>
+<p><strong>Genre:</strong> {movie.genre}</p>
+<p><strong>Language:</strong> {movie.language}</p>
+<p><strong>Score:</strong> {movie.imdbScore}</p>
+<div className="progress-section">
+<p>Movie Viewing Progress:</p>
+<div className="progress-bar-container">
+<div className="progress-bar" style={{ width: `${progress}%` }} />
+</div>
+</div>
+<div className="buttons">
+<button className="like-button" onClick={handleLike}>
+<img src="/black-like.svg" alt="Like" className="icon" />
+</button>
+<button className="dislike-button" onClick={handleDislike}>
+<img src="/black-dislike.svg" alt="Dislike" className="icon" />
+</button>
+<button className="back-button" onClick={() => navigate(-1)}>
+<img src="/back.svg" alt="Back" className="icon" />
+</button>
+</div>
+</div>
+</div>
     );
 };
-
-
+ 
 export default MovieDetails;
-

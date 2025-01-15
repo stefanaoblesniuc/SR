@@ -12,6 +12,7 @@ public class MovieAppDbContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Movie> Movies { get; set; }
     public DbSet<FavoriteMovie> FavoriteMovies { get; set; }
+    public DbSet<DislikeMovie> DislikeMovies { get; set; }
     public DbSet<PreferenceForm> PreferenceForms { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
